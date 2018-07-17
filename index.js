@@ -115,8 +115,13 @@ handlers.ping = function (data, callback) {
 handlers.notFound = function (data, callback) {
     callback(404);
 };
+
+handlers.hello = function(data, callback) {
+    callback(200, { 'welcome': 'Hello World'})
+};
 // Routers
 const router = {
     'ping': handlers.ping,
-    'sample': handlers.sample
+    'sample': handlers.sample,
+    'hello': handlers.hello
 }
